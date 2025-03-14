@@ -238,7 +238,12 @@ essentialData;
 
 // Working with the Array filter method - creates a new array with the elements that pass the test
 const longBooks = books.filter((book) => book.pages > 800).filter((book) => book.hasMovieAdaptation);
-longBooksWithMovieAdaptation; 
+longBooks; 
 
-const adventureBooks = books.filter((book) => book.genres.includes("adventure"));
+const adventureBooks = books.filter((book) => book.genres.includes("adventure"))
+.map((book) => book.title);
 adventureBooks;
+
+// Working with the Array reduce method - executes a reducer function on each element of the array, resulting in a single output value
+const pagesAllBooks = books.reduce((acc, book) => acc + book.pages, 0);
+pagesAllBooks;
