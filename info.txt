@@ -1,0 +1,5 @@
+Create new app:
+npx create-react-app@5 pizza-menu
+
+Course material:
+https://github.com/jonasschmedtmann/ultimate-react-course
