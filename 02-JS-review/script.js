@@ -181,3 +181,20 @@ summary;
 // Turnerary operator
 const hasTranslations = book.translations ? "Yes" : "No"; // Yes
 
+// Short circuiting with logical operators -happens when the first operand is enough to determine the result of the operation
+// && operator returns the first falsy value or the last value if all are truthy
+// || operator returns the first truthy value or the last value if all are falsy
+console.log(true && "Hello"); // Hello
+console.log(false && "Hello"); // false
+
+// falsy values: false, 0, "", null, undefined, NaN
+console.log("dmitri" && "Hello"); // Hello
+console.log(0 && "Hello"); // 0
+
+console.log("dmitri" || "Hello"); // dmitri
+console.log(0 || "Hello"); // Hello
+
+console.log(book.translations.spanish || "No translation available"); // No translation available
+
+// Nullish coalescing operator - returns the right-hand operand when the left-hand operand is null or undefined
+const count = book.reviews.librarything.reviewsCount ?? "No reviews available";
