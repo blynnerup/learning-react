@@ -153,11 +153,12 @@ const data = [
 //  const primaryGenre = genres[0];
 //  const secondaryGenre = genres[1];
 
-// Rest operator
+// Rest operator - collects the rest of the elements in an array
 const [primaryGenre, secondaryGenre, ...otherGenres] = genres;
 console.log(primaryGenre, secondaryGenre, otherGenres);
 
-// Spread operator
+// Spread operator - expands an array into individual elements
+// can also be used to create a new array with the spread operator
 const newGenres = [...genres, "epic fantasy"];
 console.log(newGenres);
 
