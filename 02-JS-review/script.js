@@ -169,4 +169,5 @@ console.log(newGenres2);
 const updatedBook = {...book, movePublicationDate: "2001-12-19"};
 updatedBook;
 
-
+// Template literals - notice the use of backticks
+const summary = `${title} by ${author} is a ${primaryGenre} book with a rating of ${reviews.goodreads.rating} on Goodreads. It was publised in ${book.publicationDate.split("-")[0]}.`;
