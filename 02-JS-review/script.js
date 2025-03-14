@@ -144,6 +144,7 @@ const data = [
   }
 
   // Desctructuring
+  /* Commented out to work with Array map method
   const books = getBooks();
   const book = getBook(1);
 
@@ -208,3 +209,29 @@ function getTotalReviewCount(book){
 }
 
 console.log(getTotalReviewCount(book)); // 139869
+*/
+
+
+// Working with the Array map method - creates a new array with the results of calling a provided function on every element in the calling array
+// map method does not mutate the original array, but returns a new returs a new array with the modified elements
+const books = getBooks();
+
+const x = [1,2,3,4,5].map((el) => el * 2); // [2,4,6,8,10]
+console.log(x); 
+
+const titles = books.map((book) => book.title);
+console.log(titles);
+
+function getTotalReviewCount(book){
+  const goodreadsCount = book.reviews?.goodreads?.reviewsCount;
+  const librarythingCount = book.reviews?.librarything?.reviewsCount ?? 0; // If the property reviewsCount does not exist add 0 to the total
+  return goodreadsCount + librarythingCount;
+}
+
+const essentialData = books.map((book) => ({
+  title: book.title,
+  author: book.author,
+  reviewsCount: getTotalReviewCount(book),
+}));
+
+essentialData;
