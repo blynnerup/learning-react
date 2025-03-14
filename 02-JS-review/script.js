@@ -198,3 +198,13 @@ console.log(book.translations.spanish || "No translation available"); // No tran
 
 // Nullish coalescing operator - returns the right-hand operand when the left-hand operand is null or undefined
 const count = book.reviews.librarything.reviewsCount ?? "No reviews available"; 
+
+// Optional chaining - allows you to access nested properties without worrying about whether the property exists or not
+// returns undefined if the property does not exist
+function getTotalReviewCount(book){
+    const goodreadsCount = book.reviews?.goodreads?.reviewsCount;
+    const librarythingCount = book.reviews?.librarything?.reviewsCount ?? 0; // If the property reviewsCount does not exist add 0 to the total
+    return goodreadsCount + librarythingCount;
+}
+
+console.log(getTotalReviewCount(book)); // 139869
