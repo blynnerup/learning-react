@@ -247,3 +247,26 @@ adventureBooks;
 // Working with the Array reduce method - executes a reducer function on each element of the array, resulting in a single output value
 const pagesAllBooks = books.reduce((acc, book) => acc + book.pages, 0);
 pagesAllBooks;
+
+// Section about the sort method for arrays
+const unsorted = [1, 3, 2, 5, 4];
+// Implicitly sorts the array ascendingly
+unsorted.sort(); // [1, 2, 3, 4, 5]
+
+// The way to sort numbers in ascending order
+unsorted.sort((a, b) => a - b); // [1, 2, 3, 4, 5]
+// The way to sort numbers in descending order
+unsorted.sort((a, b) => b - a); // [5, 4, 3, 2, 1]
+
+// Note that the sort method mutates the original array
+// To avoid this, you can create a copy of the array before sorting it
+const arr = [3, 7, 9, 6, 1];
+const sortedArr = arr.sort((a, b) => a - b);
+sortedArr;
+arr;
+
+// Example where we use the slice method to create a copy of the array before sorting it
+const arr2 = [3, 7, 9, 6, 1];
+const sortedArr2 = arr2.slice().sort((a, b) => a - b);
+sortedArr2;
+arr2;
