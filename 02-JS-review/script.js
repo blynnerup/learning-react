@@ -197,4 +197,4 @@ console.log(0 || "Hello"); // Hello
 console.log(book.translations.spanish || "No translation available"); // No translation available
 
 // Nullish coalescing operator - returns the right-hand operand when the left-hand operand is null or undefined
-const count = book.reviews.librarything.reviewsCount ?? "No reviews available";
+const count = book.reviews.librarything.reviewsCount ?? "No reviews available"; 
