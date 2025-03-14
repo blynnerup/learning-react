@@ -235,3 +235,10 @@ const essentialData = books.map((book) => ({
 }));
 
 essentialData;
+
+// Working with the Array filter method - creates a new array with the elements that pass the test
+const longBooks = books.filter((book) => book.pages > 800).filter((book) => book.hasMovieAdaptation);
+longBooksWithMovieAdaptation; 
+
+const adventureBooks = books.filter((book) => book.genres.includes("adventure"));
+adventureBooks;
