@@ -147,7 +147,7 @@ const data = [
   const books = getBooks();
   const book = getBook(1);
 
-  const { title, author, genres, reviews } = book;
+  const { title, author, genres, reviews, publicationDate, hasMovieAdaptation } = book;
   console.log(title, author, genres, reviews);
 
 //  const primaryGenre = genres[0];
@@ -170,4 +170,9 @@ const updatedBook = {...book, movePublicationDate: "2001-12-19"};
 updatedBook;
 
 // Template literals - notice the use of backticks
-const summary = `${title} by ${author} is a ${primaryGenre} book with a rating of ${reviews.goodreads.rating} on Goodreads. It was publised in ${book.publicationDate.split("-")[0]}.`;
+const summary = `${title} by ${author} is a ${primaryGenre} book with a rating of ${reviews.goodreads.rating} on Goodreads. It was publised in ${book.publicationDate.split("-")[0]}. The book has ${hasMovieAdaptation ? "" : "not"} been adapted into a movie.`;
+
+summary;
+
+// Turnerary operator
+const hasTranslations = book.translations ? "Yes" : "No"; // Yes
