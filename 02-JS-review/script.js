@@ -169,10 +169,15 @@ console.log(newGenres2);
 const updatedBook = {...book, movePublicationDate: "2001-12-19"};
 updatedBook;
 
+// Arrow functions
+const getYear = (str) => str.split("-")[0];
+console.log(getYear(publicationDate));
+
 // Template literals - notice the use of backticks
-const summary = `${title} by ${author} is a ${primaryGenre} book with a rating of ${reviews.goodreads.rating} on Goodreads. It was publised in ${book.publicationDate.split("-")[0]}. The book has ${hasMovieAdaptation ? "" : "not"} been adapted into a movie.`;
+const summary = `${title} by ${author} is a ${primaryGenre} book with a rating of ${reviews.goodreads.rating} on Goodreads. It was publised in ${getYear(publicationDate)}. The book has ${hasMovieAdaptation ? "" : "not"} been adapted into a movie.`;
 
 summary;
 
 // Turnerary operator
 const hasTranslations = book.translations ? "Yes" : "No"; // Yes
+
