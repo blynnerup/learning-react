@@ -1,0 +1,5 @@
+Create new app:
+npx create-react-app@latest hello-world
+
+GitHub for code:
+https://github.com/jonasschmedtmann/ultimate-react-course
