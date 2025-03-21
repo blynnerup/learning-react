@@ -272,3 +272,26 @@ const arr2 = [3, 7, 9, 6, 1];
 const sortedArr2 = arr2.slice().sort((a, b) => a - b);
 sortedArr2;
 arr2;
+
+// 1 Add new book object to the books array
+const newBook = {
+  id: 6,
+  title: "The Hobbit",
+  publicationDate: "1937-09-21",
+  author: "J. R. R. Tolkien",
+};
+
+const updatedBooks = [...books, newBook];
+updatedBooks;
+
+// 2 Delete book object from the books array
+const booksAfterDeletion = books.filter((book) => book.id !== 3);
+booksAfterDeletion;
+
+// 3 Update book object in the books array
+const updatedBooks2 = books.map((book) => {
+  if (book.id === 2) {
+    return { ...book, title: "The Futurological Congress" };
+  }
+  return book;
+});
