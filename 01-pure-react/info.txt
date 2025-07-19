@@ -1,0 +1,1 @@
+Pure React app. Created for compairison
