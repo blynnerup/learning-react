@@ -17,6 +17,7 @@ function App() {
         >
           Learn React
         </a>
+        <h3>Welcome to the RPG maker</h3>
       </header>
     </div>
   );
